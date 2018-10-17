@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Kräver att objektet med Scriptet har dessa komponenter.
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class PMovement : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PMovement : MonoBehaviour
     private Rigidbody2D rb2d;
 
     [Header("Speed")]
+    //Sätter en minimum och maximum krävd float.
+    [Range(100f, 1500f)]
     public float moveSpeed;
 
 
